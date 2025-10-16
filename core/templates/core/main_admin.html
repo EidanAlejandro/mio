@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Principal</title>
+</head>
+<body>
+    <h1>Bienvenido al Panel Principal</h1>
+    <p>Se ha autentificado correctamente.</p>
+
+    <h2>Menú principal</h2>
+    <ul>
+    <li><a href="/organization/list/"><button>Departamentos</button></a></li>
+    <li><a href="/requests/list/"><button>Solicitudes</button></a></li>
+    <li><a href="/surveys/list/"><button>Encuestas</button></a></li>
+    <li><a href="/users/list/"><button>Usuarios</button></a></li>
+    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+  {% csrf_token %}
+  <button type="submit">Cerrar sesión</button>
+</form>
+
+</ul>
